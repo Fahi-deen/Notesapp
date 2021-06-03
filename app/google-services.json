@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "70438872319",
+    "project_id": "notesapp-152aa",
+    "storage_bucket": "notesapp-152aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:70438872319:android:ba226902ee07ee5dbad8ca",
+        "android_client_info": {
+          "package_name": "com.Fahideen.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "70438872319-rpaq6vvmjhcqt0qdegtkvba1t4duprck.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSbeEbyrer3nFfNPzLoDuFcF_EdEP10is"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "70438872319-rpaq6vvmjhcqt0qdegtkvba1t4duprck.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
