@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".createnote">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:backgroundTint="#d8ede6"
+        android:outlineSpotShadowColor="@color/white"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:id="@+id/toolbarofcreatenote">
+     <EditText
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:textSize="20sp"
+         android:textStyle="bold"
+         android:background="#d8ede6"
+         android:textColor="@color/black"
+         android:hint="Enter your note title here"
+         android:id="@+id/createtitleofnote"/>
+    </androidx.appcompat.widget.Toolbar>
+    <EditText
+        android:id="@+id/createcontentofnote"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarofcreatenote"
+        android:layout_marginTop="2dp"
+        android:background="#faf7f7"
+        android:gravity="top|left"
+        android:hint="Enter your note content here"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/savenote"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/save_icon"
+        android:layout_marginBottom="23dp"
+        android:layout_marginRight="23dp"
+        app:rippleColor="@color/teal_200"
+        app:backgroundTint="#56db98"/>
+</RelativeLayout>
+</RelativeLayout>

@@ -62,7 +62,6 @@ public class forgotPassword extends AppCompatActivity {
                        {
                            Toast.makeText(getApplicationContext(),"Password mail sent successfully",Toast.LENGTH_SHORT).show();
                            finish();
-                           startActivity(new Intent(forgotPassword.this,MainActivity.class));
                        }
                        else
                            Toast.makeText(getApplicationContext(),"email doesn't exist or wrong email Entered",Toast.LENGTH_SHORT).show();
