@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CECDCB"
+    android:background="@drawable/appfront"
     tools:context=".MainActivity">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -30,6 +30,7 @@
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:scaleType="centerCrop"
+             android:background="@drawable/appfront"
              android:src="@drawable/user" />
      </androidx.cardview.widget.CardView>
 
@@ -61,7 +62,7 @@
         android:id="@+id/loginEmail"
         android:shadowRadius="10"
         android:elevation="5dp"
-        android:background="#7F7C5D"
+        android:background="#78c5ef"
         android:hint="Enter your Email address"
         android:inputType="textEmailAddress"/>
 </com.google.android.material.textfield.TextInputLayout>
@@ -81,7 +82,7 @@
             android:id="@+id/loginPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#7F7C5D"
+            android:background="#78c5ef"
             android:bottomRightRadius="15dp"
             android:bottomLeftRadius="15dp"
             android:topLeftRadius="15dp"
@@ -102,7 +103,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:backgroundTint="#9e82c2"
+            android:backgroundTint="#51a0d5"
             android:text="@string/login" />
     </RelativeLayout>
 
@@ -111,7 +112,7 @@
         android:layout_height="25dp"
         android:text="Cannot Sign in | Forgot Password"
         android:layout_centerInParent="true"
-        android:background="#d9ceed"
+        android:background="#fcffa4"
         android:textStyle="bold"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
@@ -145,10 +146,11 @@
         <Button
             android:layout_width="wrap_content"
             android:id="@+id/newSignUpBtn"
+            android:textColor="@color/black"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="@string/new_user_want_to_sign_in"
-            android:backgroundTint="#9e82c2"/>
+            android:backgroundTint="#adebad"/>
 
 
     </RelativeLayout>

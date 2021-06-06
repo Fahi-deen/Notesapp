@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f9f9f9"
-    tools:context=".signup">
+    android:background="@drawable/login_bg"
+    tools:context=".signup"
+    android:alpha="0.8">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,6 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:alpha="1"
         android:layout_above="@id/centerline2"
         android:layout_marginBottom="150dp"
         android:orientation="vertical">
@@ -51,6 +53,7 @@
         android:layout_above="@+id/centerline2"
         android:layout_marginBottom="10dp"
         android:id="@+id/email"
+        android:alpha="0.8"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
         >
@@ -58,6 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/signupemail"
+            android:alpha="0.8"
             android:hint="Enter Your Email"
             android:inputType="textEmailAddress">
 
@@ -70,6 +74,7 @@
         android:layout_below="@+id/centerline2"
         android:layout_marginTop="10dp"
         android:id="@+id/password"
+        android:alpha="0.8"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
         app:passwordToggleEnabled="true"
