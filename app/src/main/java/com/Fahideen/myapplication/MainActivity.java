@@ -1,13 +1,17 @@
 package com.Fahideen.myapplication;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,12 +27,10 @@ import org.jetbrains.annotations.NotNull;
 public class MainActivity extends AppCompatActivity {
     private TextView mgotoForgotPassword;
     private EditText mLoginEmail,mLoginPassword;
-    private RelativeLayout mLogin,mGotoSignup;
     private Button mNewSignupBtn,mLoginBtn;
     private FirebaseAuth firebaseAuth;
     private FirebaseUser firebaseUser;
-
-
+    private ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,12 +38,14 @@ public class MainActivity extends AppCompatActivity {
         firebaseAuth=FirebaseAuth.getInstance();
         mLoginEmail=findViewById(R.id.loginEmail);
         mLoginPassword=findViewById(R.id.loginPassword);
-        mLogin=findViewById(R.id.login);
         mLoginBtn=findViewById(R.id.loginButton);
         mNewSignupBtn=findViewById(R.id.newSignUpBtn);
         mgotoForgotPassword=findViewById(R.id.gotoForgotPassword);
         firebaseUser=firebaseAuth.getCurrentUser();
-
+        progressBar=findViewById(R.id.mainactivityprogressbar);
+        ActionBar bar=getSupportActionBar();
+        bar.hide();
+      // bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#CECDCB")));
         if(firebaseUser!=null)
         {
             finish();
@@ -75,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
+                    progressBar.setVisibility(View.VISIBLE);
                     firebaseAuth.signInWithEmailAndPassword(mail,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
@@ -85,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
                           else
                           {
                               Toast.makeText(getApplicationContext(),"Please verify your email and Try Again",Toast.LENGTH_SHORT).show();
+                               progressBar.setVisibility(View.INVISIBLE);
                           }
                         }
                     });

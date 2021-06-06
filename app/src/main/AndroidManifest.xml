@@ -8,9 +8,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.NoteMaker">
-        <activity android:name=".notedetails"
+
+        <activity
+            android:name=".notedetails"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
-        <activity android:name=".editnoteactivity"
+        <activity
+            android:name=".editnoteactivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".createnote"
@@ -18,7 +21,8 @@
         <activity android:name=".notesActivity" />
         <activity android:name=".forgotPassword" />
         <activity android:name=".signup" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -6,8 +6,11 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -52,6 +55,7 @@ public class notesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("All Your Notes");
+        actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#FFD580")));
         setContentView(R.layout.activity_notes);
         mFloatingBtn = findViewById(R.id.floatingBtn);
         firebaseAuth = FirebaseAuth.getInstance();
@@ -244,5 +248,6 @@ public class notesActivity extends AppCompatActivity {
 
 
     }
+
 
 }

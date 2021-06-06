@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#CECDCB"
     tools:context=".MainActivity">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -17,10 +18,10 @@
         android:layout_marginBottom="150dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="80dp">
      <androidx.cardview.widget.CardView
-         android:layout_width="80dp"
-         android:layout_height="80dp"
+         android:layout_width="100dp"
+         android:layout_height="100dp"
          app:cardCornerRadius="60dp"
          android:id="@+id/userImg"
          android:layout_marginLeft="10dp">
@@ -34,10 +35,11 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/welcome_back"
             android:layout_toRightOf="@+id/userImg"
+            android:layout_centerInParent="true"
             android:id="@+id/welcome"
             android:textSize="30sp"
             android:gravity="center"
@@ -57,6 +59,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/loginEmail"
+        android:shadowRadius="10"
+        android:elevation="5dp"
+        android:background="#7F7C5D"
         android:hint="Enter your Email address"
         android:inputType="textEmailAddress"/>
 </com.google.android.material.textfield.TextInputLayout>
@@ -66,16 +71,23 @@
         android:layout_below="@+id/centerLine"
         android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
+        android:elevation="5dp"
         android:layout_marginLeft="30dp"
         app:passwordToggleEnabled="true"
         android:id="@+id/password"
         >
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter your password"
-        android:id="@+id/loginPassword"
-        android:inputType="textPassword"/>
+
+        <EditText
+            android:id="@+id/loginPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#7F7C5D"
+            android:bottomRightRadius="15dp"
+            android:bottomLeftRadius="15dp"
+            android:topLeftRadius="15dp"
+            android:topRightRadius="15dp"
+            android:hint="Enter your password"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <RelativeLayout
@@ -83,7 +95,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/password"
-        android:layout_marginTop="21dp">
+        android:layout_marginTop="25dp">
 
         <Button
             android:id="@+id/loginButton"
@@ -95,18 +107,32 @@
     </RelativeLayout>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Forgot Password"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="Cannot Sign in | Forgot Password"
+        android:layout_centerInParent="true"
         android:background="#d9ceed"
+        android:textStyle="bold"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:id="@+id/gotoForgotPassword"
         android:textColor="@color/black"
         android:layout_below="@id/login"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:textAlignment="center"
         />
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:layout_marginTop="15dp"
+        android:id="@+id/mainactivityprogressbar"
+        android:layout_below="@+id/gotoForgotPassword">
+
+    </ProgressBar>
 
     <RelativeLayout
         android:layout_width="match_parent"

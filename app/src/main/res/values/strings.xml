@@ -2,6 +2,6 @@
     <string name="app_name">NoteMaker</string>
     <string name="welcome_back">Welcome back</string>
     <string name="login">Login</string>
-    <string name="new_user_want_to_sign_in">New User! Want To Sign In ?</string>
+    <string name="new_user_want_to_sign_in">New User! Want To Sign Up ?</string>
     <string name="logout">Logout</string>
 </resources>
