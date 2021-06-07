@@ -2,6 +2,7 @@ package com.Fahideen.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.style.UpdateLayout;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
@@ -64,6 +65,7 @@ public class createnote extends AppCompatActivity {
                     documentReference.set(notes).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void unused) {
+                            finish();
                             Toast.makeText(getApplicationContext(),"Notes added Sucessfully..",Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(createnote.this, notesActivity.class));
                         }

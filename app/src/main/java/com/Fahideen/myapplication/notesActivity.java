@@ -64,6 +64,7 @@ public class notesActivity extends AppCompatActivity {
         mFloatingBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                finish();
                 startActivity(new Intent(notesActivity.this, createnote.class));
             }
         });
